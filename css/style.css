@@ -1,1 +1,16 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap");
+body {
+  background-image: url(../images/moon.png);
+  background-repeat: repeat;
+}
+
+.navbar .navbar-brand {
+  font-size: 35px;
+  margin-left: 25px;
+  font-family: "Playfair Display", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar .nav-item {
+  margin-top: 17px;
+}
+/*# sourceMappingURL=style.css.map */
