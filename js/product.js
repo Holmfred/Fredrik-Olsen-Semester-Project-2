@@ -1,9 +1,9 @@
 import { baseUrl } from "./settings/api.js";
-import { latest } from "./components/latest.js";
+import { allShoes } from "./components/allShoes.js";
 
 const shoesUrl = baseUrl + "products";
 
-async function getLatest() {
+async function getShoe() {
 
     try {
         const response = await fetch(shoesUrl);
@@ -11,7 +11,7 @@ async function getLatest() {
 
         console.log(results)
 
-        latest(results)
+        allShoes(results)
 
 
     } catch (error) {
@@ -21,4 +21,4 @@ async function getLatest() {
 
 };
 
-getLatest()
+getShoe()

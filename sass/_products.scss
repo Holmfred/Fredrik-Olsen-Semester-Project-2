@@ -1,0 +1,7 @@
+.shoe-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
