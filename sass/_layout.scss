@@ -10,3 +10,19 @@ body {
     margin-top: 20px;
     border-radius: 15px;
 }
+
+.card {
+    border-radius: 15px !important;
+    max-height: 500px;
+}
+
+.card img {
+    border-radius: 15px 15px 0px 0px;
+    max-height: 180px;
+}
+
+.btn {
+   display: flex !important;
+   flex-direction: row;
+   justify-content: center;
+}

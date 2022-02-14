@@ -1,7 +1,9 @@
 import { baseUrl } from "./settings/api.js";
+import displayMessage from "./components/displayMessage.js";
 import { allShoes } from "./components/allShoes.js";
+import { searchShoes } from "./components/filteredShoes.js";
 
-const shoesUrl = baseUrl + "products";
+const shoesUrl = baseUrl + "/products";
 
 async function getShoe() {
 
@@ -12,10 +14,12 @@ async function getShoe() {
         console.log(results)
 
         allShoes(results)
+        searchShoes(results)
 
 
     } catch (error) {
         console.log(error);
+        displayMessage("error", error, ".shoe-container");
     }
     
 

@@ -1,7 +1,10 @@
 import { baseUrl } from "./settings/api.js";
-import { latest } from "./components/latest.js";
+import displayMessage from "./components/displayMessage.js";
+import { featured } from "./components/getFeatured.js";
+import { getHero } from "./components/getHero.js";
 
-const shoesUrl = baseUrl + "products";
+
+const shoesUrl = baseUrl + "/products";
 
 async function getLatest() {
 
@@ -11,11 +14,13 @@ async function getLatest() {
 
         console.log(results)
 
-        latest(results)
-
+        featured(results)
+        getHero()
+        
 
     } catch (error) {
         console.log(error);
+        displayMessage("error", error, ".featured-container");
     }
     
 
