@@ -14,9 +14,9 @@ export function featured(results) {
         container.innerHTML += `<div class="card" style="width: 18rem;">
                                     <img src="${imgUrl}" class="card-img-top" alt="${results[i].image.alternativeText}">
                                     <div class="card-body">
-                                        <h5 class="card-title">${results[i].title}</h5>
+                                        <h2 class="card-title">${results[i].title}</h2>
                                         <p class="card-price">${results[i].price}$</p>
-                                        <a href="#" class="btn btn-primary">See More</a>
+                                        <a href="specific.html?id=${results[i].id}" class="btn btn-primary">See More</a>
                                     </div>
                                 </div>`
     }

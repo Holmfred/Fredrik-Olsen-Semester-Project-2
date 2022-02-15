@@ -1,4 +1,4 @@
-import { allShoes } from "./allShoes.js";
+import { allShoes } from "./getAllShoes.js";
 
 export function searchShoes(shoe) {
     const search = document.querySelector(".search");

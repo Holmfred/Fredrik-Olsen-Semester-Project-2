@@ -5,6 +5,17 @@ h1 {
   margin-left: 100px;
 }
 
+.card-title {
+  font-family: "Playfair Dispaly", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-image: url(../images/moon.png);
   background-repeat: repeat;
@@ -15,12 +26,20 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0px;
+}
+
+.wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .container {
   background-color: #f2f2f2;
   margin-top: 20px;
   border-radius: 15px;
+  padding-bottom: 40px;
 }
 
 .card {
@@ -118,5 +137,65 @@ footer {
   margin-top: 20px;
   margin-left: 194px;
   width: 293px;
+}
+
+.specific-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.specific-container img {
+  max-width: 500px;
+  border-radius: 20px;
+  max-height: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.specific-container h2 {
+  margin-bottom: 25px;
+}
+
+.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.username,
+.password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  border-radius: 10px;
+  min-width: 500px;
+  height: 40px;
+}
+
+.login-form button {
+  min-width: 500px;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */
