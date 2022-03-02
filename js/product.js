@@ -1,7 +1,7 @@
 import { baseUrl } from "./settings/api.js";
 import displayMessage from "./components/displayMessage.js";
-import { allShoes } from "./components/getAllShoes.js";
-import { searchShoes } from "./components/filteredShoes.js";
+import { allShoes } from "./components/products/getAllShoes.js";
+import { searchShoes } from "./components/products/filteredShoes.js";
 
 const shoesUrl = baseUrl + "/products";
 

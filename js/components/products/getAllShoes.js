@@ -1,4 +1,4 @@
-import { baseUrl } from "../settings/api.js";
+import { baseUrl } from "../../settings/api.js";
 
 export function allShoes(results) {
     const container = document.querySelector(".shoe-container")

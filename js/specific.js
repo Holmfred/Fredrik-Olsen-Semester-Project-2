@@ -1,4 +1,4 @@
-import { specificShoe } from "./components/getShoe.js";
+import { specificShoe } from "./components/spesific/getShoe.js";
 import { baseUrl } from "./settings/api.js";
 
 const queryString = document.location.search;

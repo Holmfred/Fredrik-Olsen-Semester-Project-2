@@ -1,5 +1,5 @@
-import { baseUrl } from "../settings/api.js";
-import displayMessage from "./displayMessage.js";
+import { baseUrl } from "../../settings/api.js";
+import displayMessage from "../displayMessage.js";
 
 export async function getHero(){
     const heroUrl = baseUrl + "/home"

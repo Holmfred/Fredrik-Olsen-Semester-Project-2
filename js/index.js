@@ -1,7 +1,7 @@
 import { baseUrl } from "./settings/api.js";
 import displayMessage from "./components/displayMessage.js";
-import { featured } from "./components/getFeatured.js";
-import { getHero } from "./components/getHero.js";
+import { featured } from "./components/index/getFeatured.js";
+import { getHero } from "./components/index/getHero.js";
 
 
 const shoesUrl = baseUrl + "/products";
