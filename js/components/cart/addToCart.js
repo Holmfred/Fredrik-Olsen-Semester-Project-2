@@ -1,7 +1,7 @@
 import { getInCart } from "./addedInCart.js";
 
-export function addFavs() {
-    const cartButton = document.querySelectorAll("button")
+export function addShoes() {
+    const cartButton = document.querySelectorAll(".specific-container button")
 
 
     cartButton.forEach((button) => {
@@ -12,6 +12,7 @@ export function addFavs() {
 
         const title = this.dataset.title;
         const price = this.dataset.price;
+        const image = this.dataset.image
 
         const currentShoes = getInCart();
 
@@ -21,7 +22,7 @@ export function addFavs() {
 
 
         if (!findShoes) {
-            const shoe = { title: title, price: price};
+            const shoe = { title: title, price: price, image: image};
 
             currentShoes.push(shoe);
 
