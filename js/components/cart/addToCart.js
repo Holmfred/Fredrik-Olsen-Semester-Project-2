@@ -1,6 +1,6 @@
 import { getInCart } from "./addedInCart.js";
 
-export function addShoes() {
+export function addShoesToCart() {
     const cartButton = document.querySelectorAll(".specific-container button")
 
 
@@ -12,7 +12,7 @@ export function addShoes() {
 
         const title = this.dataset.title;
         const price = this.dataset.price;
-        const image = this.dataset.image
+        const image = this.dataset.image;
 
         const currentShoes = getInCart();
 

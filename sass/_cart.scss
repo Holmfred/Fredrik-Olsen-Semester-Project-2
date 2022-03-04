@@ -7,15 +7,43 @@
 .cartItem {
     display: flex;
     flex-direction: row;
-    margin-left: 250px;
+    margin-left: 40px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
+
+.cart {
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 600px;
+}
+
 
 .cartItemInfo {
     margin-left: 30px;
 }
 
 .clear-storage {
-    margin-left: 200px;
-    margin-top: 20px;
+    margin-left: 80px;
+    margin-top: 10px;
 }
+
+@media (min-width:800px) {
+    .cartItem {
+        margin-left: 200px;
+    }
+
+    .clear-storage {
+        margin-left: 200px;
+    }
+ }
+
+ @media (min-width:1000px) {
+    .cartItem {
+        margin-left: 400px;
+    }
+
+    .clear-storage {
+        margin-left: 400px;
+    }
+ }

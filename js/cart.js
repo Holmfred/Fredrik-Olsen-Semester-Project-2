@@ -17,7 +17,7 @@ shoeCart.forEach((results) => {
                                     <img src="${results.image}" alt="${results.title}">
                                     <div class="cartItemInfo">        
                                         <h2>${results.title}</h4>
-                                        <h3>${results.price}$</h3>
+                                        <h4>${results.price}$</h4>
                                     </div>
                                 </div>`;
 });

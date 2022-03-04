@@ -5,6 +5,14 @@ h1 {
   margin-left: 100px;
 }
 
+h2, h3, h4 {
+  font-family: "Playfair Display", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h4 {
+  font-size: 23px !important;
+}
+
 .card-title {
   font-family: "Playfair Dispaly", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 23px;
@@ -93,13 +101,10 @@ footer {
 }
 
 .latest-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[1];
+      grid-template-columns: repeat(1, auto);
   gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -111,7 +116,6 @@ footer {
   min-height: 40vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -200px;
   opacity: 0.7;
   min-width: 100%;
   margin-left: -12px;
@@ -119,11 +123,40 @@ footer {
   border-radius: 15px 15px 0px 0px;
 }
 
+@media (min-width: 800px) {
+  .latest-container {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+  }
+  .hero {
+    background-position-y: -100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    background-position-y: -150px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .latest-container {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    background-position-y: -200px;
+  }
+}
+
 .shoe-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
+  -ms-grid-columns: (auto)[1];
+      grid-template-columns: repeat(1, auto);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -132,10 +165,27 @@ footer {
   padding-bottom: 20px;
 }
 
+@media (min-width: 800px) {
+  .shoe-container {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (min-width: 1000px) {
+  .shoe-container {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+  }
+  .search {
+    margin-left: 194px;
+  }
+}
+
 .search {
   border-radius: 10px;
   margin-top: 20px;
-  margin-left: 194px;
+  margin-left: 21%;
   width: 293px;
 }
 
@@ -143,16 +193,19 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   margin-top: 20px;
   margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .specific-container img {
-  max-width: 500px;
+  max-width: 300px;
   border-radius: 20px;
   max-height: 400px;
   margin-top: 20px;
@@ -166,10 +219,26 @@ footer {
 
 .specific-container p {
   margin-left: 50px;
+  max-width: 500px;
 }
 
 .specific-container button {
   margin-left: 50px;
+}
+
+@media (min-width: 600px) {
+  .specific-container img {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .specific-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 
 .login-form {
@@ -222,8 +291,15 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-left: 250px;
+  margin-left: 40px;
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.cart {
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 600px;
 }
 
 .cartItemInfo {
@@ -231,12 +307,39 @@ footer {
 }
 
 .clear-storage {
-  margin-left: 200px;
-  margin-top: 20px;
+  margin-left: 80px;
+  margin-top: 10px;
+}
+
+@media (min-width: 800px) {
+  .cartItem {
+    margin-left: 200px;
+  }
+  .clear-storage {
+    margin-left: 200px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .cartItem {
+    margin-left: 400px;
+  }
+  .clear-storage {
+    margin-left: 400px;
+  }
 }
 
 .addShoe {
-  margin-left: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .addShoeInputs {
@@ -248,13 +351,22 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-item-align: center;
-      align-self: center;
-  margin-left: 50px;
-  margin-right: 200px;
+  min-width: 350px;
 }
 
 .addShoeInputs button {
   margin-top: 20px;
+}
+
+@media (min-width: 765px) {
+  .addShoeInputs {
+    min-width: 500px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .addShoeInputs {
+    min-width: 700px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
