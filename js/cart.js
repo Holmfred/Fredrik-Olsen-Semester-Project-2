@@ -1,4 +1,5 @@
 import { getInCart } from "./components/cart/addedInCart.js";
+import createMenu from "./components/dynamicMenu.js";
 
 const shoeCart = getInCart()
 
@@ -7,6 +8,8 @@ const container = document.querySelector(".cart")
 const clear = document.querySelector(".clear-storage")
 
 container.innerHTML = "";
+
+createMenu()
 
 if (shoeCart.length === 0) {
     container.innerHTML = "<h3>Nothing in cart</h3>";

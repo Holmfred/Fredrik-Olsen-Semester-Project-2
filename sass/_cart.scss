@@ -15,7 +15,7 @@
 .cart {
     text-align: center;
     margin-bottom: 20px;
-    min-height: 600px;
+    min-height: 500px;
 }
 
 
@@ -26,6 +26,8 @@
 .clear-storage {
     margin-left: 80px;
     margin-top: 10px;
+    width: 300px;
+    border-radius: 10px;
 }
 
 @media (min-width:800px) {

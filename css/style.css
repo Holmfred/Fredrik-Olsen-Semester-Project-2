@@ -117,7 +117,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.7;
-  min-width: 100%;
+  width: 102%;
   margin-left: -12px;
   margin-right: -12px;
   border-radius: 15px 15px 0px 0px;
@@ -299,7 +299,7 @@ footer {
 .cart {
   text-align: center;
   margin-bottom: 20px;
-  min-height: 600px;
+  min-height: 500px;
 }
 
 .cartItemInfo {
@@ -309,6 +309,8 @@ footer {
 .clear-storage {
   margin-left: 80px;
   margin-top: 10px;
+  width: 300px;
+  border-radius: 10px;
 }
 
 @media (min-width: 800px) {
@@ -329,7 +331,7 @@ footer {
   }
 }
 
-.addShoe {
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,12 +339,35 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.addShoeInputs {
+.container h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.adminOut {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#logout {
+  margin-top: 30px;
+  margin-right: 100px;
+  height: 60px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+form {
   gap: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -352,21 +377,149 @@ footer {
       -ms-flex-direction: column;
           flex-direction: column;
   min-width: 350px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.addShoeInputs button {
+form button {
   margin-top: 20px;
 }
 
+.title,
+.price,
+.description,
+.image,
+.featured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.admin input {
+  border-radius: 10px;
+  min-width: 300px;
+  height: 40px;
+}
+
+.admin textarea {
+  border-radius: 10px;
+  min-width: 300px;
+  height: 200px;
+}
+
+.admin button {
+  min-width: 300px;
+  border-radius: 10px;
+}
+
+.image,
+.featured {
+  max-width: 250px;
+}
+
+.featured {
+  gap: 5px;
+}
+
+.clicks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.allShoes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[1];
+      grid-template-columns: repeat(1, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 425px) {
+  #logout {
+    height: 30px;
+  }
+}
+
 @media (min-width: 765px) {
-  .addShoeInputs {
+  form {
     min-width: 500px;
+  }
+  .admin input,
+  .admin textarea,
+  .admin button {
+    min-width: 500px;
+  }
+  .allShoes {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
   }
 }
 
 @media (min-width: 1000px) {
-  .addShoeInputs {
+  form {
     min-width: 700px;
+  }
+  .allShoes {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+  }
+}
+
+.title,
+.price,
+.description,
+.featured,
+.id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.edit-form input {
+  border-radius: 10px;
+  min-width: 300px;
+  height: 40px;
+}
+
+.edit-form textarea {
+  border-radius: 10px;
+  min-width: 300px;
+  height: 200px;
+}
+
+.edit-form button {
+  width: 150px;
+  border-radius: 10px;
+}
+
+@media (min-width: 765px) {
+  .edit-form input,
+  .edit-form textarea {
+    min-width: 500px;
+  }
+  .edit-form button {
+    width: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */

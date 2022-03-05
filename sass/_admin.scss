@@ -1,27 +1,118 @@
-.addShoe {
+.container {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.addShoeInputs {
+.container h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.adminOut {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logout{
+    margin-top: 30px;
+    margin-right: 100px;
+    height: 60px;
+    width: 100px;
+    border-radius: 10px;
+
+}
+
+form {
     gap: 5px;
     display: flex;
     flex-direction: column;
     min-width: 350px;
+    align-items: center;
 }
 
-.addShoeInputs button {
+form button {
     margin-top: 20px;
 }
 
-@media (min-width:765px) {
-    .addShoeInputs{
-        min-width: 500px;
+.title, 
+.price,
+.description,
+.image,
+.featured {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.admin input {
+    border-radius: 10px;
+    min-width: 300px;
+    height: 40px;
+}
+
+.admin textarea {
+    border-radius: 10px;
+    min-width: 300px;
+    height: 200px;
+}
+
+.admin  button{
+    min-width: 300px;
+    border-radius: 10px;
+}
+
+.image, 
+.featured {
+    max-width: 250px;
+}
+
+.featured {
+    gap: 5px;
+}
+
+.clicks {
+    display: flex;
+    flex-direction: row;
+}
+
+.allShoes {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (min-width:425px) {
+    #logout {
+        height: 30px;
     }
 }
+
+@media (min-width:765px) {
+    form{
+        min-width: 500px;
+    }
+
+    .admin input, 
+    .admin textarea,
+    .admin button {
+        min-width: 500px;
+    }
+
+    .allShoes {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
 @media (min-width:1000px) {
-    .addShoeInputs{
+    form{
         min-width: 700px;
+    }
+
+    .allShoes {
+        grid-template-columns: repeat(3, auto);
     }
  }

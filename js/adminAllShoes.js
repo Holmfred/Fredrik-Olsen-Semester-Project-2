@@ -1,15 +1,11 @@
 import { baseUrl } from "./settings/api.js";
 import displayMessage from "./components/displayMessage.js";
-import { featured } from "./components/index/getFeatured.js";
-import { getHero } from "./components/index/getHero.js";
-import createMenu from "./components/dynamicMenu.js";
-
+import { allShoes } from "./components/admin/allShoeAdmin.js";
+import { searchShoes } from "./components/admin/filterAllShoeAdmin.js";
 
 const shoesUrl = baseUrl + "/products";
 
-createMenu()
-
-async function getLatest() {
+async function getAdminShoe() {
 
     try {
         const response = await fetch(shoesUrl);
@@ -17,16 +13,16 @@ async function getLatest() {
 
         console.log(results)
 
-        featured(results)
-        getHero()
-        
+        allShoes(results)
+        searchShoes(results)
+
 
     } catch (error) {
         console.log(error);
-        displayMessage("error", error, ".featured-container");
+        displayMessage("error", error, ".allShoes");
     }
     
 
 };
 
-getLatest()
+getAdminShoe()

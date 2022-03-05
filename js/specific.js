@@ -1,3 +1,4 @@
+import createMenu from "./components/dynamicMenu.js";
 import { specificShoe } from "./components/spesific/getShoe.js";
 import { baseUrl } from "./settings/api.js";
 
@@ -8,6 +9,8 @@ const parms = new URLSearchParams(queryString)
 const id = parms.get("id")
 
 const shoeUrl = baseUrl + "/products" + "/" + id
+
+createMenu()
 
 async function getSpecific(){
 
