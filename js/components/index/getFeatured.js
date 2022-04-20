@@ -13,7 +13,7 @@ export function featured(results) {
         const imgUrl = baseUrl + results[i].image.formats.large.url
         
         container.innerHTML += `<div class="card" style="width: 18rem;">
-                                    <img src="${imgUrl}" class="card-img-top" alt="${results[i].image.alternativeText}">
+                                    <img src="${imgUrl}" class="card-img-top" alt="${results[i].description}">
                                     <div class="card-body">
                                         <h2 class="card-title">${results[i].title}</h2>
                                         <p class="card-price">${results[i].price}$</p>

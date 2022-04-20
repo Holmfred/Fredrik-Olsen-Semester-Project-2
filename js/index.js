@@ -23,7 +23,7 @@ async function getLatest() {
 
     } catch (error) {
         console.log(error);
-        displayMessage("error", error, ".featured-container");
+        displayMessage("error", error, ".latest-container");
     }
     
 

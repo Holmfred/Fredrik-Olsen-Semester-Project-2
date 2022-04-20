@@ -8,7 +8,7 @@ export function specificShoe(results) {
 
     const imgUrl = baseUrl + results.image.formats.large.url
 
-    container.innerHTML += `<img src="${imgUrl}" alt="${results.image.alternativeText}">
+    container.innerHTML += `<img src="${imgUrl}" alt="${results.description}">
                             <div class="card-body">
                                 <h1>${results.title}</h1>
                                 <p class="card-text">${results.description}</p>
